@@ -118,24 +118,6 @@ export default function Index() {
         <StockGrid symbols={GLOBAL_STOCKS.map((s) => ({ symbol: s.symbol, exchange: s.exchange }))} />
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 lg:px-6 mt-20">
-        <div className="grid gap-4 md:grid-cols-3">
-          {[
-            { icon: TrendingUp, title: "Real-time Analysis", desc: "Live prices and technical indicators powered by Yahoo Finance." },
-            { icon: Bot, title: "AI Explanations", desc: "Plain-language insights from your personal AI tutor." },
-            { icon: BookOpen, title: "Learn As You Invest", desc: "15 free lessons from beginner basics to advanced analysis." },
-          ].map((f) => (
-            <div key={f.title} className="rounded-2xl border border-border bg-card p-6 shadow-card">
-              <div className="gradient-primary inline-flex h-10 w-10 items-center justify-center rounded-xl">
-                <f.icon className="h-5 w-5 text-white" />
-              </div>
-              <h3 className="mt-4 font-bold">{f.title}</h3>
-              <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       <Footer />
     </div>
   );
