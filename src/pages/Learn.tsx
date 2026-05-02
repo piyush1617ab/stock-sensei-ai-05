@@ -484,14 +484,15 @@ export default function Learn() {
             <div className="mt-5 space-y-3 text-sm leading-relaxed text-foreground/90">
               {active.body.map((p, i) => <p key={i}>{p}</p>)}
             </div>
-            <div className="mt-6 rounded-xl border border-primary/30 bg-primary/5 p-4">
-              <div className="text-xs font-bold uppercase tracking-wider text-primary mb-2">Key Takeaways</div>
+            <div className="mt-6 rounded-xl border border-border bg-muted/40 p-4">
+              <div className="text-xs font-bold uppercase tracking-wider text-foreground mb-2">Key Takeaways</div>
               <ul className="space-y-1.5 text-sm">
                 {active.takeaways.map((t, i) => (
-                  <li key={i} className="flex items-start gap-2"><span className="mt-1 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />{t}</li>
+                  <li key={i} className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-foreground shrink-0" />{t}</li>
                 ))}
               </ul>
             </div>
+            <LessonAITutor lesson={active} />
           </div>
         </div>
       )}
