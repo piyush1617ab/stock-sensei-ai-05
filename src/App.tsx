@@ -20,6 +20,9 @@ const Health = lazy(() => import("./pages/Health"));
 const Learn = lazy(() => import("./pages/Learn"));
 const Sectors = lazy(() => import("./pages/Sectors"));
 const Compare = lazy(() => import("./pages/Compare"));
+const Portfolio = lazy(() => import("./pages/Portfolio"));
+const Watchlist = lazy(() => import("./pages/Watchlist"));
+const Profile = lazy(() => import("./pages/Profile"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient({
@@ -50,18 +53,12 @@ const App = () => (
                 <Route path="/stock/:symbol" element={<StockDetail />} />
                 <Route path="/chatbot" element={<Chatbot />} />
                 <Route path="/health" element={<Health />} />
-                <Route
-                  path="/portfolio"
-                  element={<ProtectedRoute><Health /></ProtectedRoute>}
-                />
-                <Route
-                  path="/watchlist"
-                  element={<ProtectedRoute><Health /></ProtectedRoute>}
-                />
+                <Route path="/portfolio" element={<ProtectedRoute><Portfolio /></ProtectedRoute>} />
+                <Route path="/watchlist" element={<ProtectedRoute><Watchlist /></ProtectedRoute>} />
                 <Route path="/learn" element={<Learn />} />
                 <Route path="/compare" element={<Compare />} />
                 <Route path="/sectors" element={<Sectors />} />
-                <Route path="/profile" element={<ProtectedRoute><Health /></ProtectedRoute>} />
+                <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
