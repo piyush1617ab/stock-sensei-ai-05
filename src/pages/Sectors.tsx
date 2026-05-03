@@ -60,7 +60,7 @@ export default function Sectors() {
                   <button
                     key={s.id}
                     onClick={() => setActiveId(s.id)}
-                    className={`flex items-center gap-2 rounded-xl px-3 py-2.5 text-sm font-medium text-left whitespace-nowrap transition ${activeId === s.id ? "gradient-primary text-white shadow-md" : "text-muted-foreground hover:text-foreground hover:bg-accent"}`}
+                    className={`shrink-0 flex items-center gap-2 rounded-xl px-3 py-2.5 text-sm font-medium text-left whitespace-nowrap transition ${activeId === s.id ? "gradient-primary text-white shadow-md" : "text-muted-foreground hover:text-foreground hover:bg-accent"}`}
                   >
                     <span className="text-lg">{s.icon}</span> {s.name}
                   </button>
