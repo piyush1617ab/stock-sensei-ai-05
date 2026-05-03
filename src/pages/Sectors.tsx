@@ -69,7 +69,7 @@ export default function Sectors() {
             </div>
           </aside>
 
-          <div>
+          <div className="min-w-0">
             <div className="rounded-2xl border border-border bg-card p-6 shadow-card">
               <div className="flex items-start justify-between gap-3 flex-wrap">
                 <div>
